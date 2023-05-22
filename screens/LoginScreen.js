@@ -12,7 +12,7 @@ export default function LoginScreen() {
       <SafeAreaView  className="flex ">
         <View className="flex-row justify-start">
           <TouchableOpacity onPress={()=> navigation.goBack()} 
-          className="bg-yellow-400 p-2 rounded-tr-2xl rounded-bl-2xl ml-4">
+          className="bg-green-400 p-2 rounded-tr-2xl rounded-bl-2xl ml-4">
             <ArrowLeftIcon size="20" color="black" />
           </TouchableOpacity>
         </View>
@@ -31,7 +31,7 @@ export default function LoginScreen() {
             <TextInput 
               className="p-4 bg-gray-100 text-gray-700 rounded-2xl mb-3"
               placeholder="email"
-              value="john@gmail.com" 
+              value="email@gmail.com" 
             />
             <Text className="text-gray-700 ml-4">Password</Text>
             <TextInput 
@@ -43,10 +43,10 @@ export default function LoginScreen() {
             <TouchableOpacity className="flex items-end">
               <Text className="text-gray-700 mb-5">Forgot Password?</Text>
             </TouchableOpacity>
-            <TouchableOpacity 
-              className="py-3 bg-yellow-400 rounded-xl">
+            <TouchableOpacity  onPress={()=> navigation.navigate("Home")}
+              className="py-3 bg-green-400 rounded-xl">
                 <Text 
-                    className="text-xl font-bold text-center text-gray-700"
+                    className="text-xl font-bold text-center text-white"
                 >
                         Login
                 </Text>
@@ -70,7 +70,7 @@ export default function LoginScreen() {
                   Don't have an account?
               </Text>
               <TouchableOpacity onPress={()=> navigation.navigate('SignUp')}>
-                  <Text className="font-semibold text-yellow-500"> Sign Up</Text>
+                  <Text className="font-semibold text-green-500"> Sign Up</Text>
               </TouchableOpacity>
           </View>
           

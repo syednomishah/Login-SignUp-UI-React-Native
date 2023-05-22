@@ -14,7 +14,7 @@ export default function SignUpScreen() {
         <View className="flex-row justify-start">
             <TouchableOpacity 
                 onPress={()=> navigation.goBack()}
-                className="bg-yellow-400 p-2 rounded-tr-2xl rounded-bl-2xl ml-4"
+                className="bg-green-400 p-2 rounded-tr-2xl rounded-bl-2xl ml-4"
             >
                 <ArrowLeftIcon size="20" color="black" />
             </TouchableOpacity>
@@ -25,7 +25,7 @@ export default function SignUpScreen() {
         </View>
       </SafeAreaView>
       <View className="flex-1 bg-white px-8 pt-8"
-        style={{borderTopLeftRadius: 50, borderTopRightRadius: 50}}
+        style={{borderTopLeftRadius: 26, borderTopRightRadius: 26}}
       >
         <View className="form space-y-2">
             <Text className="text-gray-700 ml-4">Full Name</Text>
@@ -47,10 +47,10 @@ export default function SignUpScreen() {
                 value="test12345"
                 placeholder='Enter Password'
             />
-            <TouchableOpacity
-                className="py-3 bg-yellow-400 rounded-xl"
+            <TouchableOpacity onPress={()=> navigation.navigate("Home")}
+                className="py-3 bg-green-400 rounded-xl"
             >
-                <Text className="font-xl font-bold text-center text-gray-700">
+                <Text className="font-xl font-bold text-center text-white">
                     Sign Up
                 </Text>
             </TouchableOpacity>
@@ -75,7 +75,7 @@ export default function SignUpScreen() {
         <View className="flex-row justify-center mt-7">
             <Text className="text-gray-500 font-semibold">Already have an account?</Text>
             <TouchableOpacity onPress={()=> navigation.navigate('Login')}>
-                <Text className="font-semibold text-yellow-500"> Login</Text>
+                <Text className="font-semibold text-green-500"> Login</Text>
             </TouchableOpacity>
         </View>
       </View>
